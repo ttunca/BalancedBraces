@@ -167,6 +167,10 @@ public class TestClass {
 					elogdat = null;
 				}else if((c=='}') || (c==']') || (c==')')){
 					elogdat = new ErrorLoggingData(i,j,c);
+					/*
+					 * error on following line with empty stack
+					 * @TODO will need to fix in future to find other bugs
+					 */
 					elogdatPeek = S.peek();  
 					char c2 = elogdat.ch;
 					char c1 = elogdatPeek.ch;
