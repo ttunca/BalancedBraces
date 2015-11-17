@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 import javax.print.attribute.standard.PresentationDirection;
+import javax.swing.JTextArea;
 
 
 public class BalanceBraces {
@@ -66,6 +67,14 @@ public class BalanceBraces {
 		// Result
 		System.out.println("\n\nUnbalanced Braces, Brackets, and Parentheses:");
 		elogdat.prnt(ELD);
+	}
+	
+	public static void prnt(ArrayList<ErrorLog> a,JTextArea j){
+		j.append("Unbalanced Braces, Brackets, and Parentheses:" + "\n");
+		for(int i=0; i<a.size(); i++){
+			ErrorLog el = a.get(i);
+			j.append(el.str + "line:"+el.line+", pos:"+el.pos+", char:"+el.ch + "\n");
+		}
 	}
 	
 	/*Perform this before balanceBraces()*/

@@ -2,6 +2,8 @@ package TestTool;
 
 import java.util.ArrayList;
 
+import javax.swing.JTextArea;
+
 public class ErrorLog {
 	public int line; //index of the line of the text file (index begins at 1)
 	public int pos; //index of the character in a String of all characters in the line (index begins at 0)
@@ -31,4 +33,6 @@ public class ErrorLog {
 			System.out.println(el.str + "line:"+el.line+", pos:"+el.pos+", char:"+el.ch);
 		}
 	}
+
+	
 }
