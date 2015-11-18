@@ -6,8 +6,8 @@ Test Tool for checking whether all braces, brackets, and parentheses are balance
 TO BE UPDATE
 
 ### Functional test list:
-unit testing for each class method
-smoke testing for add-in features (genReport and FileChooser)
+unit testing for each class method\n
+smoke testing for add-in features (genReport and FileChooser)\n
 positive negative testing (input file formation, legal input string for balanceBraces() )
 integration testing for whole program
 
