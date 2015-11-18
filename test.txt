@@ -1,0 +1,55 @@
+[]
+"{"
+{			//	 ! This opening curly brace is missing its closing curly brace!
+"{"
+{
+{
+}
+}
+[
+]
+(
+)
+)			// 	! This closing parenthesis has not yet been opened !
+/*This is sample code that can be reused for testing purposes, or deleted and replaced by tester's test code
+  Note: the result of running the test tool on this text file should result in 2 unresolved issues:
+  
+		line:2, pos:0, char:{
+		line:12, pos:0, char:)
+*/[]
+"{"
+{			//	 ! This opening curly brace is missing its closing curly brace!
+"{"
+{
+{
+}
+}
+[
+]
+(
+)
+)			// 	! This closing parenthesis has not yet been opened !
+/*This is sample code that can be reused for testing purposes, or deleted and replaced by tester's test code
+  Note: the result of running the test tool on this text file should result in 2 unresolved issues:
+  
+		line:2, pos:0, char:{
+		line:12, pos:0, char:)
+*/[]
+"{"
+{			//	 ! This opening curly brace is missing its closing curly brace!
+"{"
+{
+{
+}
+}
+[
+]
+(
+)
+)			// 	! This closing parenthesis has not yet been opened !
+/*This is sample code that can be reused for testing purposes, or deleted and replaced by tester's test code
+  Note: the result of running the test tool on this text file should result in 2 unresolved issues:
+  
+		line:2, pos:0, char:{
+		line:12, pos:0, char:)
+*/

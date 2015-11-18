@@ -18,7 +18,7 @@ public class ReadFile {
 			}
 			fileScan.close();
 		
-		}catch(Exception excptn){
+		}catch(Exception e){
             //excptn.printStackTrace();
         }
 		return AL;
