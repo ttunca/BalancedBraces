@@ -1,10 +1,10 @@
 # BalancedBraces
 Test Tool for checking whether all braces, brackets, and parentheses are balanced in Java code
 
-## Features:
+### Features:
 
 TO BE UPDATE
 
-## Functional test list:
+### Functional test list:
 
-## Non-funcitonal test list:
+### Non-funcitonal test list:
