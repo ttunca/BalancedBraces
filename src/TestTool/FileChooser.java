@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.filechooser.*;
 
@@ -83,9 +84,17 @@ implements ActionListener{
 			log.setCaretPosition(log.getDocument().getLength());
 		}
 		if(e.getSource() == genFileButton){
+		//testing time in milliseconds of file creation
+			long startTime = System.currentTimeMillis();
+			
 			GenReport report = new GenReport();
 			report.configReport( fileObj);
 			report.genTextFile(content);
+			
+			long endTime = System.currentTimeMillis();
+			long totalTime = endTime-startTime;
+			System.out.println("creating gen report time: " + totalTime + " milliseconds");
+		/////////////////////////////////////////////////	
 		}
 	}
 	
