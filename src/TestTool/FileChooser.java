@@ -71,7 +71,7 @@ implements ActionListener{
 			log.setCaretPosition(log.getDocument().getLength());
 		}
 		BalanceBraces bb = new BalanceBraces();
-		String filepath = this.fileObj.file.getName();
+		String filepath = fileObj.file.getName();
 		if(e.getSource() == runButton){
 			log.append("Start doing balance brace detection method."+newline);			
 			bb.A = fileObj.readFile(filepath);
