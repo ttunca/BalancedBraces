@@ -6,6 +6,8 @@ import java.io.File;
 import javax.swing.*;
 
 public class Gui extends JFrame {
+	static long reportTime;
+	
 	public Gui() {
 		setTitle("Test Brace Balance");
 		setSize(600, 500);
@@ -18,9 +20,16 @@ public class Gui extends JFrame {
 		});
 		
 		// Add Panels
+		FileChooser fc = new FileChooser();
 				Container contentPane = getContentPane();
 				//contentPane.add(new TextPanel());
-				contentPane.add(new FileChooser());
+				contentPane.add(fc);
+				reportTime = fc.getGenReportTime();
+	
+	}
+	
+	public static long getReportTime(){
+		return reportTime;
 	}
 }
 

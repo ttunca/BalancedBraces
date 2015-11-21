@@ -18,6 +18,8 @@ implements ActionListener{
     //ArrayList<ErrorLog> content;
     BalanceBraces bb ;//= new BalanceBraces();
     
+    static long genReportTime;
+    
     public FileChooser() {
     	super(new BorderLayout());
     	fileObj = new ReadFile();
@@ -87,17 +89,23 @@ implements ActionListener{
 		}
 		if(e.getSource() == genFileButton){
 		//testing time in milliseconds of file creation
-			long startTime = System.currentTimeMillis();
+			long startTime = System.nanoTime();
 			
 			GenReport report = new GenReport();
 			report.configReport( fileObj);
 			report.genTextFile(bb.ELD);
+		
 			
-			long endTime = System.currentTimeMillis();
-			long totalTime = endTime-startTime;
-			System.out.println("creating gen report time: " + totalTime + " milliseconds");
+			long endTime = System.nanoTime();
+			long genReportTime = endTime-startTime;
+			
 		/////////////////////////////////////////////////	
+			
 		}
+	}
+	
+	public static long getGenReportTime(){
+		return genReportTime;
 	}
 	
 	 protected static ImageIcon createImageIcon(String path) {
