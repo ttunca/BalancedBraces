@@ -15,7 +15,8 @@ implements ActionListener{
     JTextArea log;
     JFileChooser fc;
     ReadFile fileObj;
-    ArrayList<ErrorLog> content;
+    //ArrayList<ErrorLog> content;
+    BalanceBraces bb ;//= new BalanceBraces();
     
     public FileChooser() {
     	super(new BorderLayout());
@@ -47,6 +48,8 @@ implements ActionListener{
         add(buttonPanel, BorderLayout.PAGE_END);
         add(logScrollPane, BorderLayout.CENTER);
     	
+    	//create instance
+        bb = new BalanceBraces();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -70,7 +73,6 @@ implements ActionListener{
 			}
 			log.setCaretPosition(log.getDocument().getLength());
 		}
-		BalanceBraces bb = new BalanceBraces();
 		String filepath = fileObj.file.getName();
 		if(e.getSource() == runButton){
 			log.append("Start doing balance brace detection method."+newline);			
@@ -80,7 +82,7 @@ implements ActionListener{
 			@SuppressWarnings("unused")
 			ArrayList<String> deletedStrings = bb.removeStrings();					//(main-ds2)
 			bb.prnt(bb.ELD, log);
-			content = bb.ELD;		
+			//content = bb.ELD;		
 			log.setCaretPosition(log.getDocument().getLength());
 		}
 		if(e.getSource() == genFileButton){
@@ -89,7 +91,7 @@ implements ActionListener{
 			
 			GenReport report = new GenReport();
 			report.configReport( fileObj);
-			report.genTextFile(content);
+			report.genTextFile(bb.ELD);
 			
 			long endTime = System.currentTimeMillis();
 			long totalTime = endTime-startTime;
